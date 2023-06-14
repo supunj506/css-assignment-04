@@ -1,0 +1,124 @@
+<!--* @author : @MJ-->
+<!--* Date    : 6/14/2023-->
+<!--* Time    : 11:28 AM-->
+<!--* Project : css-assignment-04-->
+<!--* Created by IntelliJ IDEA.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 05</title>
+    <link href="/assets/css_lib/normalize.css" rel="stylesheet">
+    <style>
+        main {
+            width: 70%;
+            height: 70vh;
+            border-radius: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 8px 3px 13px 0;
+            /*border: 3px solid red;*/
+            overflow: hidden;
+            /*overflow-x: scroll;*/
+        }
+
+        main > section {
+            width: 300%;
+            height: 100%;
+            /*border: 3px solid red;*/
+            display: flex;
+            position: relative;
+
+            animation-name: sliderWithRelative;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+
+
+        }
+
+        main > section > div {
+            /*border: 2px solid blue;*/
+            height: 100%;
+            width: 100%;
+        }
+
+        main > section > div:first-child {
+            background-image: url("/assets/img/5192479.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:nth-child(2){
+            background-image: url("/assets/img/6054809.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        main > section > div:last-child {
+            background-image: url("/assets/img/8275340.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        @keyframes sliderWithTransform {
+            0% {
+                transform: translateX(calc(100%/3 *0));
+            }
+            20% {
+                transform: translateX(calc(100%/3 *0));
+            }
+            40% {
+                transform: translateX(calc(-100%/3 *1));
+            }
+            60% {
+                transform: translateX(calc(-100%/3 *1));
+            }
+            80% {
+                transform: translateX(calc(-100%/3 *2));
+            }
+            100% {
+                transform: translateX(calc(-100%/3 *2));
+            }
+        }
+
+        @keyframes sliderWithRelative {
+            0% {
+                right: 0;
+            }
+            20% {
+                right: 0;
+            }
+            40% {
+                right: 100%;
+            }
+            60% {
+                right: 100%;
+            }
+            80% {
+                right: 200%;
+            }
+            100% {
+                right: 200%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
+
+</body>
+</html>
