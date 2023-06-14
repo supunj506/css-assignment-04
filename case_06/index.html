@@ -1,0 +1,146 @@
+<!--* @author : @MJ-->
+<!--* Date    : 6/14/2023-->
+<!--* Time    : 2:54 PM-->
+<!--* Project : css-assignment-04-->
+<!--* Created by IntelliJ IDEA.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 06 Animated Car</title>
+    <link rel="stylesheet" href="/assets/css_lib/normalize.css">
+    <style>
+        main {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+        }
+        main > div {
+            width: 30%;
+            height: 20%;
+            background-image: url("/assets/carAnimationAssets/car.png");
+            background-position: center;
+            background-size: cover;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: -200px;
+            left: 0;
+            margin: auto;
+        }
+
+        main > div > div {
+            width: 80px;
+            height: 80px;
+            background-color: #0ca6e8;
+            border-radius: 100%;
+            background-image: url("/assets/carAnimationAssets/wheel.png");
+            background-size: cover;
+            background-position: center;
+
+            animation-name: wheelAnimation;
+            animation-duration: 10s;
+            /*animation-timing-function: linear;*/
+            animation-iteration-count: infinite;
+        }
+        main > div > div:first-child {
+            position: relative;
+            top: 52%;
+            right: 0;
+            bottom: 0;
+            left: 8.2%;
+            /*margin: auto;*/
+        }
+        main > div > div:last-child {
+            position: relative;
+            top: 5%;
+            right: 0;
+            bottom: 0;
+            left: 69.2%;
+            /*margin: auto;*/
+        }
+
+        @keyframes wheelAnimation {
+            0% {
+               transform: rotate(0deg);
+            }
+            60%{
+                transform: rotate(-720deg);
+            }
+            100% {
+                 transform: rotate(0deg);
+             }
+
+
+        }
+
+        /*background animation-------------------------------------------------*/
+
+        main > section:first-child {
+            width: 100%;
+            height: 60vh;
+            background-image: url("/assets/carAnimationAssets/sky.jpg");
+            overflow-x: hidden;
+        }
+        main > section:first-child > div {
+            width: 500%;
+            height: 50%;
+            position: relative;
+            top: 50%;
+            background-image:url("/assets/carAnimationAssets/city.png") ;
+
+        }
+        main > section:nth-child(2) {
+            width: 100%;
+            height: 40vh;
+            overflow-x: hidden;
+        }
+
+        main > section:nth-child(2) > div {
+            width: 500%;
+            height: 100%;
+            position: relative;
+            background-image:url("/assets/carAnimationAssets/road.jpg") ;
+
+        }
+
+        main > section > div {
+            animation-name: animationForRoad;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            /*animation-fill-mode: both;*/
+        }
+
+        @keyframes animationForRoad {
+            from {
+                right: 0;
+            }
+            to {
+                right: 400%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <div></div>
+    </section>
+
+    <section>
+        <div></div>
+    </section>
+
+    <div>
+        <div></div>
+        <div></div>
+    </div>
+
+</main>
+
+</body>
+</html>
