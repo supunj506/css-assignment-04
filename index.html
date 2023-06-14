@@ -1,32 +1,127 @@
 <!--* @author : @MJ-->
-<!--* Date    : 6/13/2023-->
-<!--* Time    : 7:29 AM-->
-<!--* Project : css-assignment-04-->
+<!--* Date    : 6/2/2023-->
+<!--* Time    : 5:26 PM-->
+<!--* Project : css-assignment-->
 <!--* Created by IntelliJ IDEA.-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSS Assignment 04(Animation)</title>
-    <link rel="stylesheet" href="assets/css_lib/normalize.css">
+    <title>CSS Assignment</title>
+    <link rel="stylesheet" href="/assets/css_lib/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap" rel="stylesheet">
+
     <style>
         main {
-            width: 100%;
             height: 100vh;
-            background-color: #6a6770;
+            background-color: gray;
+
+        }
+        h1 {
+            font-family: 'Rubik', sans-serif;
+            font-size: 50px;
+            margin: 0;
+        }
+        main > section:first-child {
+            width: 100%;
+            height: 10%;
+            background-color: #0ca6e8;
             display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main > section:nth-child(2) {
+            width: 100%;
+            height: 86%;
+            background-color: white;
+            position: relative;
+        }
+
+        main > section:nth-child(2) > section {
+            width: 80%;
+            height: 80%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            display: grid;
+            grid-template-rows: repeat(2 ,1fr);
+            grid-template-columns: repeat(3 , 1fr);
+            gap: 70px;
+        }
+
+        main > section:nth-child(2) > section > a {
+            border-radius: 20px;
+            box-shadow: 12px 14px 20px 2px black;
+            cursor: pointer;
+            font-size: 20px ;
+            font-family: 'Rubik', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+
+            transition: background 0.4s,transform 0.4s;
 
         }
-        div {
+        main > section:nth-child(2) > section > a:hover{
+            transform: translateY(-20px);
 
         }
+        main > section:nth-child(2) > section > div > p {
+            margin: 10px;
+        }
+        main > section:nth-child(2) > section > a > img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+
+        }
+
+
+
+
+
+
+        main > footer {
+            width: 100%;
+            height: 4%;
+            background-color: #2d2e2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        /*---------------------------------------------------------------------------------*/
+
+
+
+
 
     </style>
 </head>
 <body>
 <main>
-<div></div>
+    <section><h1>CSS Assignment 04</h1></section>
+    <section>
+        <section>
+            <a target="_blank" href="case_01/index.html"> <img src="assets/casesScreenshots/case_01.png" alt="cage_01.png"></a>
+            <a target="_blank" href="case_02/index.html"> <img src="assets/casesScreenshots/case_02.png" alt="cage_02.png"></a>
+            <a target="_blank" href="case_03/index.html"> <img src="assets/casesScreenshots/case_03.png" alt="cage_03.png"></a>
+            <a target="_blank" href="case_04/index.html"> <img src="assets/casesScreenshots/case_04.png" alt="cage_04.png"></a>
+            <a target="_blank" href="case_05/index.html"> <img src="assets/casesScreenshots/case_05.png" alt="cage_05.png"></a>
+            <a target="_blank" href="case_06/index.html"> <img src="assets/casesScreenshots/case_06.png" alt="cage_06.png"></a>
+
+        </section>
+    </section>
+    <footer>
+        <p>Copyright @ 2023 All Right Reserved By Supun Madubhashitha</p>
+    </footer>
 </main>
 
 </body>
